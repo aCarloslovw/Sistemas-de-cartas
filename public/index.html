@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Slowmail</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+
+    <!-- ═════ LOGIN ═════ -->
+    <section id="login-view" class="card" hidden>
+      <h1>Slowmail</h1>
+      <p class="sub">cartas que chegam no seu tempo</p>
+      <form id="login-form">
+        <p class="label">Quem é você?</p>
+        <div class="who">
+          <label><input type="radio" name="user" value="Carlos" required /><span>Carlos</span></label>
+          <label><input type="radio" name="user" value="Amiga" /><span>Amiga</span></label>
+        </div>
+        <input type="password" id="password" placeholder="senha" autocomplete="current-password" required />
+        <button type="submit" class="btn">Entrar</button>
+        <p id="login-error" class="error" role="alert"></p>
+      </form>
+    </section>
+
+    <!-- ═════ APP ═════ -->
+    <section id="app-view" hidden>
+      <header class="topbar">
+        <span id="hello"></span>
+        <button id="logout" class="link">sair</button>
+      </header>
+
+      <div id="stage" class="card"></div>
+
+      <section class="chest">
+        <h2>Baú de Cartas</h2>
+        <div id="chest-list" class="chest-list"></div>
+      </section>
+    </section>
+
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
